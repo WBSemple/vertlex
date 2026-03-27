@@ -1,10 +1,12 @@
 (ns vertlex.app
   (:require [helix.core :refer [$ <>]]
+            [helix.dom :as d]
             [refx.alpha :as r]
             [vertlex.macros :refer [defnc]]
             [vertlex.routing :as routing]))
 
 (defnc app []
   (let [current-route (r/use-sub [::routing/current-route])]
-    (when current-route
-      (-> current-route :data :view $))))
+    (d/div {:className "mx-auto text-rose-500"}
+     (when current-route
+       (-> current-route :data :view $)))))

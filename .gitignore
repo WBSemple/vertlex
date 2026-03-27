@@ -4,3 +4,4 @@
 /.shadow-cljs
 /.idea
 .DS_Store
+public/output.css
