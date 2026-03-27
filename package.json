@@ -10,6 +10,8 @@
     "use-sync-external-store": "1.6.0"
   },
   "devDependencies": {
-    "shadow-cljs": "^3.3.5"
+    "@tailwindcss/cli": "^4.2.2",
+    "shadow-cljs": "^3.3.5",
+    "tailwindcss": "^4.2.2"
   }
 }
