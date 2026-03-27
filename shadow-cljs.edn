@@ -1,0 +1,13 @@
+{:deps true
+
+ :dev-http {8080 "public"}
+
+ :build-defaults {:output-dir "public/js"
+                  :asset-path "/js"
+                  :dev {:compiler-options {:output-feature-set :es6}}
+                  :devtools {:watch-dir "public"
+                             :reload-strategy :full
+                             :preloads [vertlex.refresh]}
+                  :modules {:main {:init-fn vertlex.core/init}}}
+
+ :builds {:app {:target :browser}}}
