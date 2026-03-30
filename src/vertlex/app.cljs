@@ -7,6 +7,6 @@
 
 (defnc app []
   (let [current-route (r/use-sub [::routing/current-route])]
-    (d/div {:className "mx-auto text-rose-500"}
+    (d/div {:className "mx-auto"}
      (when current-route
        (-> current-route :data :view $)))))

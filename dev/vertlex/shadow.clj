@@ -9,4 +9,4 @@
                     (ProcessBuilder/.inheritIO))
         process (ProcessBuilder/.start builder)]
     (Runtime/.addShutdownHook (Runtime/getRuntime) (Thread/new (fn [] (Process/.destroy process))))
-   (shadow/watch :app)))
+    (shadow/watch :app)))

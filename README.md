@@ -17,5 +17,6 @@
 ## Run
 
 ```
+just deps
 just run
 ```

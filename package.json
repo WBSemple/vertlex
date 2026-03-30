@@ -10,7 +10,9 @@
     "use-sync-external-store": "1.6.0"
   },
   "devDependencies": {
+    "@fontsource-variable/league-spartan": "^5.2.8",
     "@tailwindcss/cli": "^4.2.2",
+    "daisyui": "^5.5.19",
     "shadow-cljs": "^3.3.5",
     "tailwindcss": "^4.2.2"
   }
