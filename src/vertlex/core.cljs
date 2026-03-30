@@ -14,7 +14,7 @@
     {:name ::routing/home
      :title "Vertlex"
      :view home/view}]
-   
+
    ["not-found"
     {:name ::routing/not-found
      :title "Vertlex - 404"

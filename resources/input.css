@@ -15,4 +15,5 @@
 
 @theme {
     --font-sans: "League Spartan Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: Georgia, ui-serif, serif
 }
