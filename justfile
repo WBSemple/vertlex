@@ -5,4 +5,4 @@ deps:
     npm ci
 
 run:
-    npx shadow-cljs -A:dev clj-run vertlex.shadow/watch
+    npx shadow-cljs watch app

@@ -1,14 +1,9 @@
 {
   "name": "vertlex",
   "engines": {
-    "node": "20"
+    "node": "24"
   },
-  "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-refresh": "^0.18.0",
-    "use-sync-external-store": "1.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "shadow-cljs": "^3.3.5"
   }
