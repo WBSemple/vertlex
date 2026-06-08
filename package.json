@@ -10,5 +10,8 @@
     "daisyui": "^5.5.23",
     "shadow-cljs": "^3.4.11",
     "tailwindcss": "^4.3.0"
+  },
+  "dependencies": {
+    "lucide": "^1.17.0"
   }
 }
