@@ -3,8 +3,12 @@
   "engines": {
     "node": "24"
   },
-  "dependencies": {},
   "devDependencies": {
-    "shadow-cljs": "^3.3.5"
+    "@fontsource-variable/league-spartan": "^5.2.8",
+    "@fontsource/fanwood-text": "^5.2.8",
+    "@tailwindcss/cli": "^4.3.0",
+    "daisyui": "^5.5.23",
+    "shadow-cljs": "^3.4.11",
+    "tailwindcss": "^4.3.0"
   }
 }

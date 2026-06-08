@@ -6,6 +6,6 @@
                   :asset-path "/js"
                   :devtools {:watch-dir "public"
                              :reload-strategy :full}
-                  :modules {:main {:init-fn vertlex.core/init}}}
+                  :modules {:main {:init-fn vertlex.app/init!}}}
 
  :builds {:app {:target :browser}}}

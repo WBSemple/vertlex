@@ -5,3 +5,5 @@
 /.idea
 .DS_Store
 *.iml
+/public/fonts
+public/output.css
