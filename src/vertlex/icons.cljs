@@ -1,5 +1,5 @@
 (ns vertlex.icons
-  (:require ["lucide/dist/esm/icons/search$default" :as Search]))
+  (:require ["lucide/dist/esm/icons/code-xml$default" :as CodeXml]))
 
 (defn icon
   [elements]
@@ -13,10 +13,10 @@
              :width "24"
              :xmlns "http://www.w3.org/2000/svg"
              :stroke-linecap "round"
-             :stroke-width "2.5"
+             :stroke-width "2"
              :class class
              :viewBox "0 0 24 24"
              :height "24"}
        hiccup])))
 
-(def search (icon Search))
+(def code-xml (icon CodeXml))
