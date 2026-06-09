@@ -3,12 +3,14 @@
             [goog.string :as gstr]
             [goog.string.format]
             [lambdaisland.fetch :as fetch]
-            [nexus.registry :as nxr]))
+            [nexus.registry :as nxr]
+            [vertlex.dictionary :as dictionary]))
 
 (nxr/register-effect! ::get-wotd
   (fn ^:async get-wotd
-    [{{:keys [now]} :state} store]
-    (let [page (gstr/format "Wiktionary:Word_of_the_day/%s/%s_%s"
+    [{:keys [state dispatch]} store]
+    (let [now (:now state)
+          page (gstr/format "Wiktionary:Word_of_the_day/%s/%s_%s"
                             (j/call now :getFullYear)
                             (j/call now :toLocaleString "en" #js {:month "long"})
                             (j/call now :getDate))
@@ -18,7 +20,9 @@
                                                                            :prop "wikitext"
                                                                            :format "json"
                                                                            :origin "*"}}))
-                                         {:keywordize-keys true})]
+                                         {:keywordize-keys true})
+          word (->> (get-in body [:parse :wikitext :*])
+                    (re-find #"(?<=\{\{WOTD\|)[^\|]+"))]
       (when (= status 200)
-        (swap! store assoc ::wotd (->> (get-in body [:parse :wikitext :*])
-                                       (re-find #"(?<=\{\{WOTD\|)[^\|]+")))))))
+        (swap! store assoc ::wotd word)
+        (dispatch [[::dictionary/get-entries word]])))))

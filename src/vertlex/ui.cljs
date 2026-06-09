@@ -14,7 +14,7 @@
 (defn view
   [state]
   (let [wotd (::wiktionary/wotd state)]
-    [:div
+    [:div.flex.flex-col.h-screen
      [:div.navbar.bg-base-200
       [:div.max-w-6xl.mx-auto.w-full.px-1.flex
        [:h1.text-4xl.font-serif "Vertlex"]
@@ -28,4 +28,13 @@
         [:div.text-center [:span.loading.loading-dots.loading-xl]])
       [:div (str (:counter state))]
       [:button.btn {:on {:click [[:actions/inc [:counter]]]}}
-       "inc"]]]))
+       "inc"]]
+     [:div.mt-auto.text-center.p-2.text-lg.text-neutral
+      "With thanks to "
+      [:a.link {:href "https://www.wiktionary.org/"
+                :target "_blank"}
+       "wiktionary.org"]
+      " and "
+      [:a.link {:href "https://dictionaryapi.dev/"
+                :target "_blank"}
+       "dictionaryapi.dev"]]]))
