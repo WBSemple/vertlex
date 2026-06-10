@@ -1,5 +1,6 @@
 (ns vertlex.icons
-  (:require ["lucide/dist/esm/icons/code-xml$default" :as CodeXml]))
+  (:require ["lucide/dist/esm/icons/code-xml$default" :as CodeXml]
+            ["lucide/dist/esm/icons/heart$default" :as Heart]))
 
 (defn icon
   [elements]
@@ -20,3 +21,4 @@
        hiccup])))
 
 (def code-xml (icon CodeXml))
+(def heart (icon Heart))

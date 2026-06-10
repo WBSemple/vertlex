@@ -25,6 +25,6 @@
   (render! @store))
 
 (defn ^:export init! []
-  (reset! store {:counter 1})
+  (reset! store {})
   (nxr/dispatch store {} [[::wiktionary/get-wotd]])
   (dataspex/inspect "App state" store))
